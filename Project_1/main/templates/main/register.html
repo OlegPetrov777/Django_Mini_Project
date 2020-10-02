@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Регистрация
+{% endblock %}
+
+{% block content %}
+  <body>
+  <h1>Тут регистрация</h1>
+
+  <form>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="Отправить">
+  </form>
+
+  <a class="" href="{% url 'home' %}">назад</a>
+
+  </body>
+{% endblock %}
